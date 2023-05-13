@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo-sekolah.jpg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,7 +54,7 @@
                 <div class="nav-item dropdown">
                     <a href="index.html" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Beranda</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="#" class="dropdown-item">Sambutan Kepala Sekolah</a>
+                        <a href="#sambutan" class="dropdown-item">Sambutan Kepala Sekolah</a>
                         <a href="#" class="dropdown-item">Berita Terbaru</a>
                         <a href="#" class="dropdown-item">Galeri Sekolah</a>
                     </div>
@@ -181,7 +181,7 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="sambutan">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
@@ -536,8 +536,8 @@
                     <a class="btn btn-link" href="">FAQs & Help</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <h4 class="text-white mb-3">Kontak</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>JL. TRANS SULAWESI LORONG TANI SAWIT, Dusun TAMPALLA, Desa / Kelurahan Bone Bone, Kec. Bone-Bone, Kab. Luwu Utara, Prov. Sulawesi Selatan, Kode Pos 92966</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
