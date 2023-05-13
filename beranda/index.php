@@ -55,7 +55,7 @@
                     <a href="index.html" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Beranda</a>
                     <div class="dropdown-menu fade-down m-0">
                         <a href="#sambutan" class="dropdown-item">Sambutan Kepala Sekolah</a>
-                        <a href="#" class="dropdown-item">Berita Terbaru</a>
+                        <a href="./berita.php" class="dropdown-item">Berita Terbaru</a>
                         <a href="#" class="dropdown-item">Galeri Sekolah</a>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
     <!-- Carousel End -->
 
 
-    <!-- Service Start -->
+    <!-- Berita Terbaru -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -177,7 +177,7 @@
             </div>
         </div>
     </div>
-    <!-- Service End -->
+    <!-- Berita terbaru -->
 
 
     <!-- About Start -->
