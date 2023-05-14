@@ -95,39 +95,21 @@
     </nav>
     <!-- Navbar End -->
 
-
-    <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                            <h1 class="display-3 text-white animated slideInDown">SMK Negeri 1 Luwu Utara</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                                <h1 class="display-3 text-white animated slideInDown">SMK Negeri 1 Luwu Utara</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
-                            </div>
+        <div class="position-relative" style="height: 400px;">
+            <img class="w-100 h-100" src="img/carousel-2.jpg" style="object-fit:cover;" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style="background: rgba(24, 29, 56, .7); height: 500px;">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-sm-10 col-lg-8">
+                        <h1 class="text-white">BERITA TERBARU</h1>
+                            <p class="fs-5 text-white mb-4 pb-2">Kumpulan Berita Terbaru SMK Negeri 1 Luwu Utara</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Carousel End -->
 
 
     <!-- Service Start -->
@@ -147,6 +129,7 @@
 
                 <div class="col-lg-10 wow fadeInUp" data-wow-delay="0.1s">
                     <h3>Judul</h3>
+                    <img class="img-fluid" src="./img/cat-1.jpg" alt="">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quae minima officiis nihil provident vel, doloribus aliquam! Fugiat dolores, architecto deserunt minus doloribus doloremque excepturi obcaecati id repellendus optio iusto?    
                     </p>
@@ -169,6 +152,7 @@
 
                 <div class="col-lg-10 wow fadeInUp" data-wow-delay="0.1s">
                     <h3>Judul</h3>
+                    <img class="img-fluid" src="./img/cat-1.jpg" alt="">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quae minima officiis nihil provident vel, doloribus aliquam! Fugiat dolores, architecto deserunt minus doloribus doloremque excepturi obcaecati id repellendus optio iusto?    
                     </p>
@@ -191,6 +175,7 @@
 
                 <div class="col-lg-10 wow fadeInUp" data-wow-delay="0.1s">
                     <h3>Judul</h3>
+                    <img class="img-fluid" src="./img/cat-1.jpg" alt="">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quae minima officiis nihil provident vel, doloribus aliquam! Fugiat dolores, architecto deserunt minus doloribus doloremque excepturi obcaecati id repellendus optio iusto?    
                     </p>
