@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo-sekolah.jpg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-school me-3"></i>SMK Bisa!!!</h2>
+            <img style="margin-right: 10px;" height="50px" src="img/logo-sekolah.jpg" alt=""> SMK Negeri 1 Luwu Utara
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -54,8 +54,8 @@
                 <div class="nav-item dropdown">
                     <a href="index.html" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Beranda</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="#" class="dropdown-item">Sambutan Kepala Sekolah</a>
-                        <a href="#" class="dropdown-item">Berita Terbaru</a>
+                        <a href="#sambutan" class="dropdown-item">Sambutan Kepala Sekolah</a>
+                        <a href="./berita.php" class="dropdown-item">Berita Terbaru</a>
                         <a href="#" class="dropdown-item">Galeri Sekolah</a>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
     <!-- Carousel End -->
 
 
-    <!-- Service Start -->
+    <!-- Berita Terbaru -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -177,11 +177,11 @@
             </div>
         </div>
     </div>
-    <!-- Service End -->
+    <!-- Berita terbaru -->
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="sambutan">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
@@ -205,50 +205,88 @@
     <div class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
-                <h1 class="mb-5">Courses Categories</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Keahlian</h6>
+                <h1 class="mb-5">Program Keahlian</h1>
             </div>
             <div class="row g-3">
-                <div class="col-lg-7 col-md-6">
+                <div class="col-lg-12">
                     <div class="row g-3">
-                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
                             <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/cat-1.jpg" alt="">
+                                <img class="img-fluid" src="img/1-prodi-tkro.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Web Design</h5>
-                                    <small class="text-primary">49 Courses</small>
+                                    <h5 class="m-0">Teknik Kendaraan Ringan</h5>
+                                    <small class="text-primary">TKR/Otomotif</small>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
                             <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/cat-2.jpg" alt="">
+                                <img class="img-fluid" src="img/2-prodi-tekbis.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Graphic Design</h5>
-                                    <small class="text-primary">49 Courses</small>
+                                    <h5 class="m-0">Teknis Bisnis Sepeda Motor</h5>
+                                    <small class="text-primary">TBSM</small>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
                             <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/cat-3.jpg" alt="">
+                                <img class="img-fluid" src="img/3-prodi-atp.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Video Editing</h5>
-                                    <small class="text-primary">49 Courses</small>
+                                    <h5 class="m-0">Agribisnis Tanaman Perkebunan</h5>
+                                    <small class="text-primary">ATP</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/4-prodi-agri.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Agribisnis Tanaman Pangan & Holtikultura</h5>
+                                    <small class="text-primary">ATPH</small>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/5-prodi-aphp.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Agribisnis Pengolahan Hasil Pertanian</h5>
+                                    <small class="text-primary">APHP</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/6-prodi-atu.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Agribisnis Ternak Unggas</h5>
+                                    <small class="text-primary">ATU</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/7-prodi-kom.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Teknik Komputer & Jaringan</h5>
+                                    <small class="text-primary">TKJ</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/8-prodi-dipb.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Desain Permodelan dan Informasi Bangunan</h5>
+                                    <small class="text-primary">DIPB</small>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover;">
-                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                            <h5 class="m-0">Online Marketing</h5>
-                            <small class="text-primary">49 Courses</small>
-                        </div>
-                    </a>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -498,8 +536,8 @@
                     <a class="btn btn-link" href="">FAQs & Help</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <h4 class="text-white mb-3">Kontak</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>JL. TRANS SULAWESI LORONG TANI SAWIT, Dusun TAMPALLA, Desa / Kelurahan Bone Bone, Kec. Bone-Bone, Kab. Luwu Utara, Prov. Sulawesi Selatan, Kode Pos 92966</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
