@@ -20,6 +20,15 @@ $base_url = "http://localhost/sipsalu/"
 			<li class="nav-item">
 				<a class="nav-link <?= $active == 'jurusan' ? 'active' : '' ?> " href="<?= $base_url ?>admin/jurusan/index.php">Jurusan</a>
 			</li>
+			<li class="nav-item">
+				<a class="nav-link <?= $active == 'sejarah' ? 'active' : '' ?> " href="<?= $base_url ?>admin/sejarah/sejarah_singkat.php">Sejarah Sekolah</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link <?= $active == 'struktur' ? 'active' : '' ?> " href="<?= $base_url ?>admin/struktur/struktur.php">Struktur Organisasi</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link <?= $active == 'visi_misi' ? 'active' : '' ?> " href="<?= $base_url ?>admin/visi_misi/visi_misi.php">Visi Misi</a>
+			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<li class="nav-item dropdown">
