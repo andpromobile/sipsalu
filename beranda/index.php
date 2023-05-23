@@ -208,7 +208,7 @@
                 <h6 class="section-title bg-white text-center text-primary px-3">Keahlian</h6>
                 <h1 class="mb-5">Program Keahlian</h1>
             </div>
-            <div class="row g-3">
+            <div class="row justify-content-md-center g-3">
                 <div class="col-lg-4">
                     <div class="row g-3">
                         <div class="col-lg-6 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
@@ -219,6 +219,12 @@
                                     <small class="text-primary">TKR/Otomotif</small>
                                 </div>
                             </a>
+                            <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <p>Profession</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
                         </div>
                         <div class="col-lg-6 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
                             <a class="position-relative d-block overflow-hidden" href="">
