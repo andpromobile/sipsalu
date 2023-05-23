@@ -209,9 +209,9 @@
                 <h1 class="mb-5">Program Keahlian</h1>
             </div>
             <div class="row g-3">
-                <div class="col-lg-12">
+                <div class="col-lg-4">
                     <div class="row g-3">
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
+                        <div class="col-lg-6 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/1-prodi-tkro.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
@@ -220,7 +220,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
+                        <div class="col-lg-6 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/2-prodi-tekbis.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
@@ -229,7 +229,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
+                        <div class="col-lg-6 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/3-prodi-atp.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
@@ -238,7 +238,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
+                        <div class="col-lg-6 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/4-prodi-agri.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
@@ -248,7 +248,7 @@
                             </a>
                         </div>
 
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
+                        <div class="col-lg-6 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/5-prodi-aphp.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
@@ -257,7 +257,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
+                        <div class="col-lg-6 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/6-prodi-atu.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
@@ -266,7 +266,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
+                        <div class="col-lg-6 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/7-prodi-kom.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
@@ -275,7 +275,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
+                        <div class="col-lg-6 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/8-prodi-dipb.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
