@@ -3,7 +3,7 @@
     require_once ('../koneksi.php');
 
     
-    $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1");
+    $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 2 order by id desc LIMIT 8");
 
     ?>
 
@@ -56,13 +56,13 @@
 
     <div class="container-fluid p-0 mb-5">
         <div class="position-relative" style="height: 400px;">
-            <img class="w-100 h-100" src="img/carousel-2.jpg" style="object-fit:cover;" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style="background: rgba(24, 29, 56, .7); height: 500px;">
+            <img class="w-100 h-100" src="img/profil.png" style="object-fit:cover;" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7); height: 500px;">
                 <div class="container">
                     <div class="row justify-content-center text-center">
                         <div class="col-sm-10 col-lg-8">
-                        <h1 class="text-white">BERITA TERBARU</h1>
-                            <p class="fs-5 text-white mb-4 pb-2">Kumpulan Berita Terbaru SMK Negeri 1 Luwu Utara</p>
+                        <h1 class="text-white">GALERI SEKOLAH</h1>
+                            <p class="fs-5 text-white mb-4 pb-2">Kumpulan Kegiatan SMK Negeri 1 Luwu Utara</p>
                         </div>
                     </div>
                 </div>
@@ -74,32 +74,27 @@
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <?php while($row = mysqli_fetch_assoc($berita)) : ?>
+            
             <div class="row justify-content-md-center">
-                <div class="col-lg-2" style="display: flex; flex-direction: column;">
-                    <span>
-                        <i class="fa fa-user text-primary mb-4"></i> &nbsp; Admin Sekolah
-                    </span>
-
-                    <span>
-                        <i class="fa fa-clock text-primary mb-4"></i> &nbsp; <?= $row['tanggal'] ?>
-                    </span>
-                    
+            <?php while($row = mysqli_fetch_assoc($berita)) : ?>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="">
+                        </div>
+                       
+                        <div class="text-center p-4">
+                            <h5 class="mb-0"><?= $row['judul'] ?></h5>
+                           
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h3><?= $row['judul'] ?></h3>
-                    <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="">
-                    <p>
-                        <?= $row['isi'] ?>
-                    </p>
-                    
-                </div>
-
+                <?php endwhile; ?>
             </div>
             <br>
 
-            <?php endwhile; ?>
+            
 
                         
         </div>
