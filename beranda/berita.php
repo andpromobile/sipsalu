@@ -5,6 +5,8 @@
     
     $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1");
 
+    $active = 'beranda';
+
     ?>
 
 <!DOCTYPE html>
@@ -18,7 +20,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/logo-sekolah.jpg" rel="icon">
+    <link href="img/logo-sekolah.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,7 +78,7 @@
         <div class="container">
             <?php while($row = mysqli_fetch_assoc($berita)) : ?>
             <div class="row justify-content-md-center">
-                <div class="col-lg-2" style="display: flex; flex-direction: column;">
+                <div class="col-lg-2 wow fadeInUp" data-wow-delay="0.1s" style="display: flex; flex-direction: column;">
                     <span>
                         <i class="fa fa-user text-primary mb-4"></i> &nbsp; Admin Sekolah
                     </span>

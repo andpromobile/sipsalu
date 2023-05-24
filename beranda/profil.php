@@ -4,6 +4,8 @@
 
     $query = mysqli_query($koneksi, "SELECT * FROM tbl_jurusan order by nama_jurusan");
 
+    $active = 'program';
+
     ?>
 
 <!DOCTYPE html>
@@ -17,7 +19,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/logo-sekolah.jpg" rel="icon">
+    <link href="img/logo-sekolah.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

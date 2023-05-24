@@ -6,7 +6,10 @@
 
     $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1 order by id desc LIMIT 3");
 
-    ?>
+    $active = 'beranda';
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +22,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/logo-sekolah.jpg" rel="icon">
+    <link href="img/logo-sekolah.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,7 +102,7 @@
     <!-- Carousel End -->
 
 
-    <!-- Berita Terbaru -->
+    <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -146,10 +149,10 @@
             </div>
         </div>
     </div>
-    <!-- Berita terbaru -->
+    <!-- Service End -->
 
 
-    <!-- About Start -->
+    <!-- Sambutan Start -->
     <div class="container-xxl py-5" id="sambutan">
         <div class="container">
             <div class="row g-5">
@@ -171,100 +174,95 @@
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Sambutan End -->
 
 
-    <!-- Categories Start -->
+    <!-- Prodi Start -->
     <div class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Keahlian</h6>
-                <h1 class="mb-5">Program Keahlian</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Jurusan</h6>
+                <h1 class="mb-5">Program Studi Keahlian</h1>
             </div>
             <div class="row justify-content-md-center g-3">
                 <div class="col-lg-12">
                     <div class="row text-center g-3">
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
-                           
-                            <img class="border rounded-circle p-2 mx-auto mb-3" src="img/1-prodi-tkro.jpg"
-                                style="width: 150px; height: 150px;">
-                            <h5 class="mb-0">Teknik Kendaraan Ringan</h5>
-                            <p>TKR/Otomotif</p>
-                            
-                        </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
-                            
-
-                            <img class="border rounded-circle p-2 mx-auto mb-3" src="img/2-prodi-tekbis.jpg"
-                                style="width: 150px; height: 150px;">
-                                <h5 class="m-0">Teknis Bisnis Sepeda Motor</h5>
-                                <p>TBSM</p>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
-                            
-                            <img class="border rounded-circle p-2 mx-auto mb-3" src="img/3-prodi-atp.jpg"
+                        
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">   
+                            <img class="border rounded-circle p-2 mx-auto mb-3" src="img/5-prodi-aphp.jpg"
                             style="width: 150px; height: 150px;">
-                            <h5 class="m-0">Agribisnis Tanaman Perkebunan</h5>
-                            <p>ATP</p>
-                            
+                            <h5 class="m-0">Agribisnis Pengolahan Hasil Pertanian</h5>
+                            <p>APHP</p>
                         </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
-                            
+
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
                             <img class="border rounded-circle p-2 mx-auto mb-3" src="img/4-prodi-agri.jpg"
                             style="width: 150px; height: 150px;">
                             <h5 class="m-0">Agribisnis Tanaman Pangan & Holtikultura</h5>
                             <p>ATPH</p>
                         </div>
 
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
-                            
-                            <img class="border rounded-circle p-2 mx-auto mb-3" src="img/5-prodi-aphp.jpg"
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
+                            <img class="border rounded-circle p-2 mx-auto mb-3" src="img/3-prodi-atp.jpg"
                             style="width: 150px; height: 150px;">
-                            <h5 class="m-0">Agribisnis Pengolahan Hasil Pertanian</h5>
-                            <p>APHP</p>
-                            
+                            <h5 class="m-0">Agribisnis Tanaman Perkebunan</h5>
+                            <p>ATP</p>
                         </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
-                           
+
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">   
                             <img class="border rounded-circle p-2 mx-auto mb-3" src="img/6-prodi-atu.jpg"
                             style="width: 150px; height: 150px;">
                             <h5 class="m-0">Agribisnis Ternak Unggas</h5>
                             <p>ATU</p>
+                        </div>
 
-                        </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
-                            
-                            <img class="border rounded-circle p-2 mx-auto mb-3" src="img/7-prodi-kom.jpg"
-                            style="width: 150px; height: 150px;">
-                            <h5 class="m-0">Teknik Komputer & Jaringan</h5>
-                            <p>TKJ</p>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
-                            
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
                             <img class="border rounded-circle p-2 mx-auto mb-3" src="img/8-prodi-dipb.jpg"
                             style="width: 150px; height: 150px;">
                             <h5 class="m-0">Desain Permodelan dan Informasi Bangunan</h5>
                             <p>DIPB</p>
                         </div>
+
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
+                            <img class="border rounded-circle p-2 mx-auto mb-3" src="img/2-prodi-tekbis.jpg" 
+                            style="width: 150px; height: 150px;">
+                            <h5 class="m-0">Teknis Bisnis Sepeda Motor</h5>
+                            <p>TBSM</p>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
+                            <img class="border rounded-circle p-2 mx-auto mb-3" src="img/1-prodi-tkro.jpg"
+                            style="width: 150px; height: 150px;">
+                            <h5 class="mb-0">Teknik Kendaraan Ringan</h5>
+                            <p>TKR/Otomotif</p>
+                        </div>
+                        
+                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">    
+                            <img class="border rounded-circle p-2 mx-auto mb-3" src="img/7-prodi-kom.jpg"
+                            style="width: 150px; height: 150px;">
+                            <h5 class="m-0">Teknik Komputer & Jaringan</h5>
+                            <p>TKJ</p>
+                        </div>
+                        
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-    <!-- Categories Start -->
+    <!-- Prodi End -->
 
 
-    <!-- Courses Start -->
+    <!-- Berita Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Berita</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">Artikel</h6>
                 <h1 class="mb-5">Berita Terbaru</h1>
             </div>
             <div class="row g-4 justify-content-center">
                 <?php while($row = mysqli_fetch_assoc($berita)) : ?>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="">
@@ -290,10 +288,10 @@
             </div>
         </div>
     </div>
-    <!-- Courses End -->
+    <!-- Berita End -->
 
 
-    <!-- Team Start -->
+    <!-- Galeri Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -303,7 +301,7 @@
 
             <div class="owl-carousel testimonial-carousel position-relative">
                 <?php while($row = mysqli_fetch_assoc($query)) : ?>
-                <div class="testimonial-item text-center">
+                <div class="testimonial-item text-center wow fadeInUp" data-wow-delay="0.2s">
                     <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>">
                     
                     
@@ -316,7 +314,7 @@
 
       </div>      
     </div>
-    <!-- Team End -->
+    <!-- Galeri End -->
 
 
 
