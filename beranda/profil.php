@@ -62,8 +62,7 @@
                 <div class="container">
                     <div class="row justify-content-center text-center">
                         <div class="col-sm-10 col-lg-8">
-                        <h1 class="text-white">PROFIL JURUSAN</h1>
-                            <!-- <p class="fs-5 text-white mb-4 pb-2">Kumpulan Berita Terbaru SMK Negeri 1 Luwu Utara</p> -->
+                        <h1 class="text-white animated slideInDown">PROFIL JURUSAN</h1>
                         </div>
                     </div>
                 </div>
@@ -73,37 +72,25 @@
 
     
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <!-- Jurusan Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s"">
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="col-lg-12" style="display: flex; flex-direction: column;">
-               
-<?php while($row = mysqli_fetch_assoc($query)) : ?>
-    
-        <h3>
-            <?= $row['nama_jurusan'] ?>
-        </h3>
-
-        <p>
-        <?= $row['isi'] ?>
-        </p>
-        
-        <br>
-<?php endwhile; ?>
-
-
+                <?php while($row = mysqli_fetch_assoc($query)) : ?>
+                    <h3>
+                        <?= $row['nama_jurusan'] ?>
+                    </h3>
+                    <p>
+                        <?= $row['isi'] ?>
+                    </p>
+                    <br>
+                    <?php endwhile; ?>
                 </div>
-
             </div>
-
-            
-
-
-            
         </div>
     </div>
-    <!-- Service End -->
+    <!-- Jurusan End -->
 
 
 
