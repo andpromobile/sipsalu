@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <div class="nav-item dropdown">
-                    <a class="nav-link <?= $active == 'beranda' ? 'active' : '' ?> dropdown-toggle" href="index.php">Beranda</a>
+                    <a class="nav-link <?= $active == 'beranda' ? 'active' : '' ?> dropdown-toggle" href="./index.php">Beranda</a>
                     <!-- <a href="index.php" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Beranda</a> -->
                     <div class="dropdown-menu fade-down m-0">
                         <a href="./index.php#sambutan" class="dropdown-item">Sambutan Kepala Sekolah</a>
@@ -17,11 +17,12 @@
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tentang Kami</a>
+                    <a class="nav-link <?= $active == 'tentang' ? 'active' : '' ?> dropdown-toggle" href="./tentang.php">Tentang Kami</a>
+                    <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tentang Kami</a> -->
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item">Visi Misi</a>
-                        <a href="testimonial.html" class="dropdown-item">Sejarah Singkat</a>
-                        <a href="404.html" class="dropdown-item">Struktur Organisai</a>
+                        <a href="./tentang.php#visi_misi" class="dropdown-item">Visi Misi</a>
+                        <a href="./tentang.php#sejarah" class="dropdown-item">Sejarah Sekolah</a>
+                        <a href="./tentang.php#struktur" class="dropdown-item">Struktur Organisai</a>
                     </div>
                 </div>
                 <div class="nav-item dropdown">

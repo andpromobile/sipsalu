@@ -58,13 +58,13 @@
 
     <div class="container-fluid p-0 mb-5">
         <div class="position-relative" style="height: 400px;">
-            <img class="w-100 h-100" src="img/carousel-2.jpg" style="object-fit:cover;" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style="background: rgba(24, 29, 56, .7); height: 500px;">
+            <img class="w-100 h-100" src="img/profil.png" style="object-fit:cover;" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7); height: 500px;">
                 <div class="container">
                     <div class="row justify-content-center text-center">
                         <div class="col-sm-10 col-lg-8">
-                        <h1 class="text-white">BERITA TERBARU</h1>
-                            <p class="fs-5 text-white mb-4 pb-2">Kumpulan Berita Terbaru SMK Negeri 1 Luwu Utara</p>
+                        <h1 class="text-white animated slideInDown">BERITA TERBARU</h1>
+                            <p class="fs-5 text-white mb-4 pb-2 animated slideInDown">Kumpulan Berita Terbaru SMK Negeri 1 Luwu Utara</p>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
     </div>
 
 
-    <!-- Service Start -->
+    <!-- Berita Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <?php while($row = mysqli_fetch_assoc($berita)) : ?>
@@ -82,11 +82,9 @@
                     <span>
                         <i class="fa fa-user text-primary mb-4"></i> &nbsp; Admin Sekolah
                     </span>
-
                     <span>
                         <i class="fa fa-clock text-primary mb-4"></i> &nbsp; <?= $row['tanggal'] ?>
                     </span>
-                    
                 </div>
 
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -94,19 +92,14 @@
                     <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="">
                     <p>
                         <?= $row['isi'] ?>
-                    </p>
-                    
+                    </p>                   
                 </div>
-
             </div>
             <br>
-
-            <?php endwhile; ?>
-
-                        
+            <?php endwhile; ?>        
         </div>
     </div>
-    <!-- Service End -->
+    <!-- Berita End -->
 
 
 

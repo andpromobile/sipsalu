@@ -2,10 +2,13 @@
 
     require_once ('../koneksi.php');
 
-    
-    $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 2 order by id desc LIMIT 8");
+    $query = mysqli_query($koneksi, "SELECT * FROM tbl_visi_misi where id=1 ");
 
-    $active = 'beranda';
+    $sekolah = mysqli_query($koneksi, "SELECT * FROM tbl_sejarah_singkat where id=1 ");
+
+    $struktur = mysqli_query($koneksi, "SELECT * FROM tbl_struktur_organisasi where id=1 ");
+
+    $active = 'tentang';
 
     ?>
 
@@ -63,8 +66,7 @@
                 <div class="container">
                     <div class="row justify-content-center text-center">
                         <div class="col-sm-10 col-lg-8">
-                        <h1 class="text-white animated slideInDown">GALERI SEKOLAH</h1>
-                            <p class="fs-5 text-white mb-4 pb-2 animated slideInDown">Kumpulan Kegiatan SMK Negeri 1 Luwu Utara</p>
+                        <h1 class="text-white animated slideInDown">TENTANG KAMI</h1>
                         </div>
                     </div>
                 </div>
@@ -72,33 +74,75 @@
         </div>
     </div>
 
+    
 
-    <!-- Galeri Start -->
-    <div class="container-xxl py-5">
+    <!-- Visi Misi Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="visi_misi">
         <div class="container">
-            <div class="row justify-content-md-center">
-            <?php while($row = mysqli_fetch_assoc($berita)) : ?>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="">
-                        </div>
-                       
-                        <div class="text-center p-4">
-                            <h5 class="mb-0"><?= $row['judul'] ?></h5>
-                           
-                        </div>
-                    </div>
-                </div>
-
-                <?php endwhile; ?>
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Tentang Kami</h6>
+                <h1 class="mb-5">Visi dan Misi</h1>
             </div>
-            <br>
+            <div class="row justify-content-md-center">
+                <div class="col-lg-12" style="display: flex; flex-direction: column;">
+                <?php $row = mysqli_fetch_assoc($query); ?>
+                <h3>Visi</h3>
+                <p>
+                    <?= $row['visi'] ?>
+                </p>
+        
+                <br>
+        
+                <h3>Misi</h3>
+                <p>
+                    <?= $row['misi'] ?>
+                </p>
+            </div>
+            </div>
         </div>
     </div>
-    <!-- Galeri End -->
+    <!-- Visi Misi End -->
 
 
+    <!-- sejarah Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.3s" id="sejarah">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Tentang Kami</h6>
+                <h1 class="mb-5">Sejarah Sekolah</h1>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-lg-12" style="display: flex; flex-direction: column;">
+                <?php $row = mysqli_fetch_assoc($sekolah); ?>
+                <p>
+                    <?= $row['sejarah_singkat'] ?>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- sejarah End -->
+
+        <!-- Struktur Start -->
+        <?php $row = mysqli_fetch_assoc($struktur); ?>
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.5s" id="struktur">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Tentang Kami</h6>
+                <h1 class="mb-5"><?= $row['judul'] ?></h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-7 col-md-7">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="../images/struktur/<?= $row['foto'] ?>" alt="">
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    <!-- Struktur End -->
 
     <!-- Footer Start -->
     <?php include('footer.php'); ?>
