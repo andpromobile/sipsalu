@@ -2,7 +2,7 @@
 
     require_once ('../koneksi.php');
 
-    $query = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 2 order by id desc LIMIT 4");
+    $query = mysqli_query($koneksi, "SELECT * FROM tbl_galeri where id_kategori = 2 order by id desc LIMIT 4");
 
     $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1 order by id desc LIMIT 3");
 
@@ -302,9 +302,8 @@
             <div class="owl-carousel testimonial-carousel position-relative">
                 <?php while($row = mysqli_fetch_assoc($query)) : ?>
                 <div class="testimonial-item text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>">
-                    
-                    
+                    <!-- <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>"> -->
+                    <img style="object-fit: cover;" height="200px" width="100%" src="../images/galeri/<?= $row['foto'] ?>">
                     <div class="testimonial-text bg-light text-center p-4">
                         <h5 class="mb-0"><?= $row['judul'] ?></h5>
                     </div>
