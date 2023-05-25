@@ -302,7 +302,7 @@
             <div class="owl-carousel testimonial-carousel position-relative">
                 <?php while($row = mysqli_fetch_assoc($query)) : ?>
                 <div class="testimonial-item text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>">
+                    <img style="object-fit: cover;" height="200px" width="100%" src="../images/artikel/<?= $row['foto'] ?>">
                     
                     
                     <div class="testimonial-text bg-light text-center p-4">
