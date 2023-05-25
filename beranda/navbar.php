@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <div class="nav-item dropdown">
-                    <a class="nav-link <?= $active == 'beranda' ? 'active' : '' ?> dropdown-toggle" href="./index.php">Beranda</a>
+                <a class="nav-link dropdown-toggle <?= $active == 'beranda' ? 'active' : '' ?>" data-bs-toggle="dropdown" href="#">Beranda</a>
                     <!-- <a href="index.php" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Beranda</a> -->
                     <div class="dropdown-menu fade-down m-0">
                         <a href="./index.php#sambutan" class="dropdown-item">Sambutan Kepala Sekolah</a>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                    <a class="nav-link <?= $active == 'tentang' ? 'active' : '' ?> dropdown-toggle" href="./tentang.php">Tentang Kami</a>
+                    <a class="nav-link dropdown-toggle <?= $active == 'tentang' ? 'active' : '' ?>" data-bs-toggle="dropdown" href="#">Tentang Kami</a>
                     <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tentang Kami</a> -->
                     <div class="dropdown-menu fade-down m-0">
                         <a href="./tentang.php#visi_misi" class="dropdown-item">Visi Misi</a>
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                    <a class="nav-link <?= $active == 'program' ? 'active' : '' ?> dropdown-toggle" href="#">Program</a>
+                    <a class="nav-link dropdown-toggle <?= $active == 'program' ? 'active' : '' ?>" data-bs-toggle="dropdown" href="#">Program</a>
                     <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Program</a> -->
                     <div class="dropdown-menu fade-down m-0">
                         <a href="./jurusan.php" class="dropdown-item">Profil Jurusan</a>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                <a class="nav-link <?= $active == 'alumni' ? 'active' : '' ?> dropdown-toggle" href="#">Alumni</a>
+                <a class="nav-link dropdown-toggle <?= $active == 'alumni' ? 'active' : '' ?>" data-bs-toggle="dropdown" href="#">Alumni</a>
                     <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Alumni</a> -->
                     <div class="dropdown-menu fade-down m-0">
                         <a href="#" class="dropdown-item">Profil Alumni</a>
@@ -42,8 +42,8 @@
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                <a class="nav-link <?= $active == 'kontak' ? 'active' : '' ?> dropdown-toggle" href="#">Hubungi Kami</a>
-                    <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hubungi Kami</a> -->
+                <!-- <a class="nav-link <?= $active == 'kontak' ? 'active' : '' ?> dropdown-toggle" href="#">Hubungi Kami</a> -->
+                    <a class="nav-link dropdown-toggle <?= $active == 'kontak' ? 'active' : '' ?>" data-bs-toggle="dropdown" href="#">Hubungi Kami</a>
                     <div class="dropdown-menu fade-down m-0">
                         <a href="./kontak.php" class="dropdown-item">Kontak</a>
                         <a href="./pusat_bantuan.php" class="dropdown-item">Pusat Bantuan</a>

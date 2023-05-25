@@ -10,7 +10,7 @@
     $halaman = 2; //batasan halaman
     $page = isset($_GET['halaman'])? (int)$_GET["halaman"]:1;
     $mulai = ($page>1) ? ($page * $halaman) - $halaman : 0;
-    $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1 LIMIT $mulai, $halaman");
+    $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1 order by id desc LIMIT $mulai, $halaman");
     $berita_row = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1");
     $total = mysqli_num_rows($berita_row);
     $pages = ceil($total/$halaman);
