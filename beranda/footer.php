@@ -5,7 +5,7 @@
                     <h4 class="text-white mb-3">Menu Utama</h4>
                     <a class="btn btn-link" href="./index.php">Beranda</a>
                     <a class="btn btn-link" href="./berita.php">Berita Terbaru</a>
-                    <a class="btn btn-link" href="./profil.php">Profil Jurusan</a>
+                    <a class="btn btn-link" href="./jurusan.php">Profil Jurusan</a>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <h4 class="text-white mb-3">Hubungi Kami</h4>
@@ -14,14 +14,14 @@
                         Kode Pos 91966</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0852 4200 7001</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>smkn1lutra@gmail.com</p>
-                    <div class="d-flex pt-2">
+                    <!-- <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/osismpksmkn1lutra/"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/kesiswaansmkn1lutra/"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Link Terkait</h4>
-                    <p class="mb-2"><i class="fa fa-link me-3"></i><a href="https://luwuutara.siap-ppdb.com/">PPDB Luwu Utara</a></p>
+                    <p class="mb-2"><i class="fa fa-link me-3"></i><a href="https://luwuutara.siap-ppdb.com/" target="blank_">PPDB Luwu Utara</a></p>
                 </div>
                 
             </div>

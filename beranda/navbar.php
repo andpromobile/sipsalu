@@ -29,15 +29,16 @@
                     <a class="nav-link <?= $active == 'program' ? 'active' : '' ?> dropdown-toggle" href="#">Program</a>
                     <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Program</a> -->
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="./profil.php" class="dropdown-item">Profil Jurusan</a>
+                        <a href="./jurusan.php" class="dropdown-item">Profil Jurusan</a>
                         <a href="#" class="dropdown-item">Ekstrakurikuler</a>
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Alumni</a>
+                <a class="nav-link <?= $active == 'alumni' ? 'active' : '' ?> dropdown-toggle" href="#">Alumni</a>
+                    <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Alumni</a> -->
                     <div class="dropdown-menu fade-down m-0">
                         <a href="#" class="dropdown-item">Profil Alumni</a>
-                        <a href="#" class="dropdown-item">Testimoni Alumni</a>
+                        <a href="./alumni.php" class="dropdown-item">Testimoni Alumni</a>
                     </div>
                 </div>
                 <div class="nav-item dropdown">
