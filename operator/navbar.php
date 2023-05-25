@@ -20,6 +20,12 @@ $base_url = "http://localhost/sipsalu/"
 			<li class="nav-item">
 				<a class="nav-link <?= $active == 'artikel' ? 'active' : '' ?> " href="<?= $base_url ?>operator/artikel/index.php">Artikel</a>
 			</li>
+			<li class="nav-item">
+				<a class="nav-link <?= $active == 'bukutamu' ? 'active' : '' ?> " href="<?= $base_url ?>operator/bukutamu/index.php">Bukutamu</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link <?= $active == 'galeri' ? 'active' : '' ?> " href="<?= $base_url ?>operator/galeri/index.php">Galeri</a>
+			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<li class="nav-item dropdown">

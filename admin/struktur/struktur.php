@@ -5,7 +5,7 @@ require_once '../../koneksi.php';
 $query_struktur = mysqli_query($koneksi, "SELECT * FROM tbl_struktur_organisasi WHERE id = 1");
 $struktur = mysqli_fetch_assoc($query_struktur);
 
-$active = 'struktur'; 
+$active = 'tentang'; 
 ?>
 <!DOCTYPE html>
 <html>

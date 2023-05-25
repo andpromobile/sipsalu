@@ -4,17 +4,17 @@ require_once '../../koneksi.php';
 if(!isset($_GET['id']) || $_GET['id'] == '') header('Location: index.php');
 
 $id = $_GET['id'];
-$query = mysqli_query($koneksi, "SELECT tbl_artikel.*, tbl_kategori_artikel.nama_kategori FROM tbl_artikel INNER JOIN tbl_kategori_artikel ON tbl_artikel.id_kategori = tbl_kategori_artikel.id WHERE tbl_artikel.id = $id");
+$query = mysqli_query($koneksi, "SELECT tbl_galeri.*, tbl_kategori_artikel.nama_kategori FROM tbl_galeri INNER JOIN tbl_kategori_artikel ON tbl_galeri.id_kategori = tbl_kategori_artikel.id WHERE tbl_galeri.id = $id");
 
 $row = mysqli_fetch_assoc($query);
-$active = 'artikel';
+$active = 'galeri';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Detail Artikel - SMKN 1 Luwu Utara</title>
+	<title>Detail Galeri - SMKN 1 Luwu Utara</title>
 	<link rel="stylesheet" href="../../resources/datatables/datatables.min.css">
 	<link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
 </head>
@@ -27,7 +27,7 @@ $active = 'artikel';
 					<div class="card-header">
 						<div class="clearfix">
 							<div class="float-left">
-								Detail Artikel - <strong><?= $row['judul'] ?></strong>
+								Detail Galeri - <strong><?= $row['judul'] ?></strong>
 							</div>
 							<div class="float-right">
 								<a href="index.php">Kembali</a>
@@ -35,7 +35,7 @@ $active = 'artikel';
 						</div>
 					</div>
 					<div class="card-body">
-						<img src="../../images/artikel/<?= $row['foto'] ?>" alt="<?= $row['judul'] ?>" width="50%" class="img-thumbnail"><br><br>
+						<img src="../../images/galeri/<?= $row['foto'] ?>" alt="<?= $row['judul'] ?>" width="50%" class="img-thumbnail"><br><br>
 						<?= $row['isi'] ?>				
 					</div>
 				</div>

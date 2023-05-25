@@ -1,7 +1,7 @@
 <?php 
 require_once '../../koneksi.php';
 
-$query = mysqli_query($koneksi, "SELECT tbl_alumni.id, tbl_alumni.nama_alumni, tbl_alumni.foto, tbl_alumni.angkatan, tbl_jurusan.nama_jurusan AS jurusan FROM tbl_alumni LEFT JOIN tbl_jurusan ON tbl_alumni.id_jurusan = tbl_jurusan.id");
+$query = mysqli_query($koneksi, "SELECT tbl_alumni.id, tbl_alumni.nama_alumni, tbl_alumni.foto, tbl_alumni.angkatan, tbl_alumni.pekerjaan, tbl_jurusan.nama_jurusan AS jurusan FROM tbl_alumni LEFT JOIN tbl_jurusan ON tbl_alumni.id_jurusan = tbl_jurusan.id order by tbl_alumni.id desc");
 $no = 1;
 $active = 'alumni';
 ?>
@@ -56,6 +56,7 @@ $active = 'alumni';
 						            <th>Nama</th>
 						            <th>Jurusan</th>
 						            <th>Angkatan</th>
+									<th>Pekerjaan</th>
 						            <th>Aksi</th>
 						        </tr>
 						    </thead>
@@ -67,6 +68,7 @@ $active = 'alumni';
 						       			<td><a href="detail.php?id=<?= $row['id'] ?>"><?= $row['nama_alumni'] ?></a></td>
 						       			<td><?= $row['jurusan'] ?></td>
 						       			<td><?= $row['angkatan'] ?></td>
+										   <td><?= $row['pekerjaan'] ?></td>
 						       			<td>
 						       				<a href="ubah.php?id=<?= $row['id'] ?>" class="btn btn-success btn-sm">Ubah</a>
 											<a href="hapus.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin menghapus Alumni ini?')">Hapus</a>

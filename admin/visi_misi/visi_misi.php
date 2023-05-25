@@ -3,7 +3,7 @@ require_once '../../koneksi.php';
 
 $query = mysqli_query($koneksi, "SELECT * FROM tbl_visi_misi WHERE id = 1");
 $visi_misi = mysqli_fetch_assoc($query);
-$active = 'visi_misi'; 
+$active = 'tentang'; 
 
 ?>
 <!DOCTYPE html>

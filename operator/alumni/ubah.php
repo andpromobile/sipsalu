@@ -59,6 +59,10 @@ $active = 'alumni';
 								</div>
 							</div>
 							<div class="form-group">
+								<label for="pekerjaan">Pekerjaan</label>
+								<input type="text" value="<?= $alumni['pekerjaan'] ?>" class="form-control" id="pekerjaan" placeholder="Pekerjaan" autocomplete="off" required="required" name="pekerjaan">
+							</div>
+							<div class="form-group">
 								<label for="isi">Testimoni</label>
 								<textarea name="isi" id="ckeditor" class="ckeditor form-control">
 									<?= $alumni['isi'] ?>
