@@ -12,6 +12,8 @@
     $total = mysqli_num_rows($berita_row);
     $pages = ceil($total/$halaman);
 
+    $prev = $page-1;
+    $next = $page+1;
     ?>
 
 <!DOCTYPE html>
@@ -110,7 +112,7 @@
                             <ul class="pagination">
                               
                                 <li class="page-item <?php echo ($page-1 == 0)? 'disabled':''; ?>">
-                                    <a <?php echo ($page-1 > 0)? "href='?halaman=$page'":""; ?> class="page-link">Previous</a>
+                                    <a <?php echo ($page-1 > 0)? "href='?halaman=$prev'":""; ?> class="page-link">Previous</a>
                                   </li>
 
                               <?php for ($i=1; $i<=$pages ; $i++){ ?>
@@ -124,7 +126,7 @@
                                 <?php } ?>
                           
                               <li class="page-item <?php echo ($page == $pages)? 'disabled':''; ?>">
-                                <a <?php echo ($page != $pages)? "href='?halaman=$page+1'":""; ?> class="page-link">Next</a>
+                                <a <?php echo ($page != $pages)? "href='?halaman=$next'":""; ?> class="page-link">Next</a>
                               </li>
                             </ul>
                           </nav>
