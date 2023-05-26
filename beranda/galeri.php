@@ -3,7 +3,19 @@
     require_once ('../koneksi.php');
 
     
-    $berita = mysqli_query($koneksi, "SELECT * FROM tbl_galeri where id_kategori = 2 order by id desc LIMIT 8");
+    // $berita = mysqli_query($koneksi, "SELECT * FROM tbl_galeri where id_kategori = 2 order by id desc LIMIT 8");
+
+
+    $halaman = 8; //batasan halaman
+    $page = isset($_GET['halaman'])? (int)$_GET["halaman"]:1;
+    $mulai = ($page>1) ? ($page * $halaman) - $halaman : 0;
+    $berita = mysqli_query($koneksi, "SELECT * FROM tbl_galeri where id_kategori = 2 order by id desc LIMIT $mulai, $halaman");
+    $berita_row = mysqli_query($koneksi, "SELECT * FROM tbl_galeri where id_kategori = 2");
+    $total = mysqli_num_rows($berita_row);
+    $pages = ceil($total/$halaman);
+
+    $prev = $page-1;
+    $next = $page+1;
 
     $active = 'beranda';
 
@@ -90,10 +102,28 @@
                         </div>
                     </div>
                 </div>
-
                 <?php endwhile; ?>
             </div>
             <br>
+            <div class="row justify-content-md-center">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item <?php echo ($page-1 == 0)? 'disabled':''; ?>">
+                                <a <?php echo ($page-1 > 0)? "href='?halaman=$prev'":""; ?> class="page-link">Previous</a>
+                            </li>
+                            <?php for ($i=1; $i<=$pages ; $i++){ ?>
+                                <li class="page-item <?php echo $page == $i? 'active':''; ?>">
+                                    <a class="page-link" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
+                                </li>
+                            <?php } ?>
+                            <li class="page-item <?php echo ($page == $pages)? 'disabled':''; ?>">
+                                <a <?php echo ($page != $pages)? "href='?halaman=$next'":""; ?> class="page-link">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>               
+            </div>
         </div>
     </div>
     <!-- Galeri End -->
