@@ -103,7 +103,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="tab-content w-100">
-                        <div class="tab-pane fade show active" id="tab-pane-1">
+                        <div class="tab-pane fade" id="tab-pane-1">
                             <div class="row g-4">
                                 <div class="col-md-12">
                                     <p class="mb-4">Ikuti kami di :</p>
@@ -132,7 +132,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="tab-pane-4">
+                        <div class="tab-pane fade show active" id="tab-pane-4">
                             <div class="row g-4">
                                 <div class="col-md-12">
                                     <p class="mb-4">Email kami di :</p>

@@ -110,30 +110,22 @@
             <?php endwhile; ?> 
             
             <div class="row justify-content-md-center">
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                  
-                        <nav>
-                            <ul class="pagination">
-                              
-                                <li class="page-item <?php echo ($page-1 == 0)? 'disabled':''; ?>">
-                                    <a <?php echo ($page-1 > 0)? "href='?halaman=$prev'":""; ?> class="page-link">Previous</a>
-                                  </li>
-
-                              <?php for ($i=1; $i<=$pages ; $i++){ ?>
-
-                        
-                              
+                <div class="col-lg-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item <?php echo ($page-1 == 0)? 'disabled':''; ?>">
+                                <a <?php echo ($page-1 > 0)? "href='?halaman=$prev'":""; ?> class="page-link">Previous</a>
+                            </li>
+                            <?php for ($i=1; $i<=$pages ; $i++){ ?>
                                 <li class="page-item <?php echo $page == $i? 'active':''; ?>">
                                     <a class="page-link" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
-                                  </li>
-                               
-                                <?php } ?>
-                          
-                              <li class="page-item <?php echo ($page == $pages)? 'disabled':''; ?>">
+                                </li>
+                            <?php } ?>
+                            <li class="page-item <?php echo ($page == $pages)? 'disabled':''; ?>">
                                 <a <?php echo ($page != $pages)? "href='?halaman=$next'":""; ?> class="page-link">Next</a>
-                              </li>
-                            </ul>
-                          </nav>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>               
             </div>        
         </div>
