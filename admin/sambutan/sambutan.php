@@ -2,17 +2,17 @@
 
 require_once '../../koneksi.php';
 
-$query_struktur = mysqli_query($koneksi, "SELECT * FROM tbl_struktur_organisasi WHERE id = 1");
-$struktur = mysqli_fetch_assoc($query_struktur);
+$query_sambutan = mysqli_query($koneksi, "SELECT * FROM tbl_sambutan WHERE id = 1");
+$sambutan = mysqli_fetch_assoc($query_sambutan);
 
-$active = 'tentang'; 
+$active = 'sambutan'; 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Struktur Organisasi - SMKN 1 Luwu Utara</title>
+	<title>Sambutan Kepala Sekolah - SMKN 1 Luwu Utara</title>
 	<link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
 </head>
 <body>
@@ -24,7 +24,7 @@ $active = 'tentang';
 					<div class="card-header">
 						<div class="clearfix">
 							<div class="float-left">
-								Struktur Organisasi
+								Sambutan Kepala Sekolah
 							</div>
 						</div>
 					</div>
@@ -46,16 +46,26 @@ $active = 'tentang';
 							</div>
 						<?php unset($_SESSION['gagal']) ?>
 						<?php endif; ?>
-						<form method="POST" action="proses_struktur.php" enctype="multipart/form-data">
+						<form method="POST" action="proses_sambutan.php" enctype="multipart/form-data">
 							<div class="form-group">
-								<label for="judul">Judul</label>
-								<input type="text" value="<?= $struktur['judul'] ?>" class="form-control" id="judul" placeholder="Judul" autocomplete="off" required="required" name="judul">
+								<label for="nama">Nama</label>
+								<input type="text" value="<?= $sambutan['nama'] ?>" class="form-control" id="nama" placeholder="Nama" autocomplete="off" required="required" name="nama">
+							</div>
+							<div class="form-group">
+								<label for="judul">Salam</label>
+								<input type="text" value="<?= $sambutan['judul'] ?>" class="form-control" id="judul" placeholder="Judul" autocomplete="off" required="required" name="judul">
+							</div>
+							<div class="form-group">
+								<label for="isi">Sambutan</label>
+								<textarea name="isi" id="ckeditor" class="ckeditor form-control">
+									<?= $sambutan['isi'] ?>
+								</textarea>
 							</div>
 							<div class="form-group">
 								<label for="foto">Foto</label>
-								<input type="file" class="form-control-file mb-2" id="foto" placeholder="Foto Struktur Organisasi" autocomplete="off" name="foto">
+								<input type="file" class="form-control-file mb-2" id="foto" placeholder="Foto Sambutan Kepala Sekolah" autocomplete="off" name="foto">
 								*gambar sebelumnya <br>
-								<img src="../../images/struktur/<?= $struktur['foto'] ?>" alt="<?= $struktur['judul'] ?>" width="500px" class="mt-2">
+								<img src="../../images/sambutan/<?= $sambutan['foto'] ?>" alt="<?= $sambutan['judul'] ?>" width="500px" class="mt-2">
 							</div>
 							<div class="form-group">
 								<button type="submit" class="btn btn-sm btn-primary" name="ubah">Ubah</button>

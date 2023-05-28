@@ -4,7 +4,7 @@
 // if(!isset($_SESSION['auth_admin'])) header('Location: ./');
 if(!session_id()) session_start();
 
-if(!isset($_SESSION['auth_admin'])) 
+if(!isset($_SESSION['auth_admin2'])) 
 	echo "<script>alert('Anda harus login terlebih dahulu!');window.location='../login.php'</script>";
 
 $active = 'dashboard';

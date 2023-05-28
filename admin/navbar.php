@@ -1,7 +1,7 @@
 <?php
 if(!session_id()) session_start();
 
-if(!isset($_SESSION['auth_admin'])) 
+if(!isset($_SESSION['auth_admin1'])) 
 	echo "<script>alert('Anda harus login terlebih dahulu!');window.location='../../login.php'</script>";
 
 	//header('Location: ../../login.php');
@@ -23,6 +23,9 @@ $base_url = "http://localhost/sipsalu/"
 			<!-- <li class="nav-item">
 				<a class="nav-link <?= $active == 'kategori' ? 'active' : '' ?> " href="<?= $base_url ?>admin/kategori_artikel/index.php">Kategori Artikel</a>
 			</li> -->
+			<li class="nav-item">
+				<a class="nav-link <?= $active == 'sambutan' ? 'active' : '' ?> " href="<?= $base_url ?>admin/sambutan/sambutan.php">Sambutan</a>
+			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link <?= $active == 'tentang' ? 'active' : '' ?> dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Tentang Sekolah</a>
 				<div class="dropdown-menu">
