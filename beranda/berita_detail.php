@@ -2,9 +2,27 @@
 
     require_once ('../koneksi.php');
 
-    $alumni = mysqli_query($koneksi, "SELECT * FROM tbl_alumni");
+    if(!isset($_GET['id']) || $_GET['id'] == '') header('Location: berita.php');
+    $id = $_GET['id'];
+    
+    $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id = $id");
+    $row = mysqli_fetch_assoc($berita) ;
+    $date = $row['tanggal'];
+    $datetime = DateTime::createFromFormat('Y-m-d', $date);
 
-    $active = 'alumni';
+
+    $active = 'beranda';
+
+    // $halaman = 2; //batasan halaman
+    // $page = isset($_GET['halaman'])? (int)$_GET["halaman"]:1;
+    // $mulai = ($page>1) ? ($page * $halaman) - $halaman : 0;
+    // $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1 order by id desc LIMIT $mulai, $halaman");
+    // $berita_row = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1");
+    // $total = mysqli_num_rows($berita_row);
+    // $pages = ceil($total/$halaman);
+
+    // $prev = $page-1;
+    // $next = $page+1;
 
     ?>
 
@@ -62,8 +80,8 @@
                 <div class="container">
                     <div class="row justify-content-center text-center">
                         <div class="col-sm-10 col-lg-8">
-                        <h1 class="text-white animated slideInDown">TESTIMONI ALUMNI</h1>
-                            <!-- <p class="fs-5 text-white mb-4 pb-2 animated slideInDown">Kumpulan Kegiatan SMK Negeri 1 Luwu Utara</p> -->
+                        <h1 class="text-white animated slideInDown">DETAIL BERITA</h1>
+                            <!-- <p class="fs-5 text-white mb-4 pb-2 animated slideInDown">Kumpulan Berita Terbaru SMK Negeri 1 Luwu Utara</p> -->
                         </div>
                     </div>
                 </div>
@@ -71,30 +89,34 @@
         </div>
     </div>
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-4 wow fadeInUp" data-wow-delay="0.1s">
+
+    <!-- Detail Berita Start -->
+    <div class="container-xxl py-2 category">
         <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimoni</h6>
-                <h1 class="mb-5">Kata Alumni Kami!</h1>
-            </div>
-            
-            <div class="owl-carousel testimonial-carousel position-relative">
-            <?php while($row = mysqli_fetch_assoc($alumni)) : ?>
-                <div class="testimonial-item">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="../images/alumni/<?= $row['foto'] ?>" style="width: 200px; height: 200px;">
-                    <h5 class="mb-0 text-center"><?= $row['nama_alumni'] ?></h5>
-                    <p class="mb-2 text-center"><?= $row['angkatan'] ?> || <?= $row['pekerjaan'] ?></p>
-                    <div class="testimonial-text bg-light p-3" style="text-align: justify;">
-                    <p class="mb-0"><?= $row['isi'] ?></p>
-                    </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-8 wow zoomIn" data-wow-delay="0.1s">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="#">
+                        <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="" >
+                        <div class="bg-white position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+                            <!-- <h5 class="m-0"><?= $row['tanggal'] ?></h5>
+                            <small class="text-primary">Admin Sekolah</small> -->
+                            <h6 class="flex-fill py-1"><i class="fa fa-user text-primary me-2"></i>&nbsp; By Admin Sekolah</h6>
+                            <h6 class="flex-fill py-1"><i class="fa fa-clock text-primary me-2"></i>&nbsp; <?= $datetime->format('d-m-Y') ?> </h6>
+                        </div>
+                    </a>    
                 </div>
-                <?php endwhile; ?>
             </div>
-            
+            <div class="row justify-content-center py-2" style="text-align: justify;">
+                <div class="col-lg-8 col-md-8 wow zoomIn" data-wow-delay="0.2s">
+                    <h3 class="mb-2"><?= $row['judul'] ?></h3>
+                    <p class="mb-2"><?= $row['isi'] ?></p>
+                    <a href="./berita.php" class="flex-shrink-0 btn btn-md btn-primary px-3 border-end" style="border-radius: 30px;">Kembali Ke Berita Terbaru</a>
+                </div>
+            </div>
+
         </div>
     </div>
-    <!-- Testimonial End -->
+    <!-- Detail Berita End -->
 
 
 

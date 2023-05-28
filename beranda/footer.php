@@ -7,11 +7,11 @@
                     <a class="btn btn-link" href="./berita.php">Berita Terbaru</a>
                     <a class="btn btn-link" href="./jurusan.php">Profil Jurusan</a>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6" style="text-align: justify;">
                     <h4 class="text-white mb-3">Hubungi Kami</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>JL. TRANS SULAWESI LORONG TANI SAWIT, Dusun
-                        TAMPALLA, Desa / Kelurahan Bone Bone, Kec. Bone-Bone, Kab. Luwu Utara, Prov. Sulawesi Selatan,
-                        Kode Pos 91966</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>JL. TRANS SULAWESI LORONG TANI SAWIT, 
+                    Dusun TAMPALLA, Desa / Kelurahan Bone Bone, Kec. Bone-Bone, Kab. Luwu Utara, Prov. Sulawesi Selatan,
+                    Kode Pos 91966</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0852 4200 7001</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>smkn1lutra@gmail.com</p>
                     <!-- <div class="d-flex pt-2">

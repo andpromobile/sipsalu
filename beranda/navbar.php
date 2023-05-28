@@ -22,7 +22,7 @@
                     <div class="dropdown-menu fade-down m-0">
                         <a href="./tentang.php#visi_misi" class="dropdown-item">Visi Misi</a>
                         <a href="./tentang.php#sejarah" class="dropdown-item">Sejarah Sekolah</a>
-                        <a href="./tentang.php#struktur" class="dropdown-item">Struktur Organisai</a>
+                        <a href="./tentang.php#struktur" class="dropdown-item">Struktur Organisasi</a>
                     </div>
                 </div>
                 <div class="nav-item dropdown">

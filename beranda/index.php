@@ -106,7 +106,7 @@
 
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-4">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Kenapa Harus</h6>
@@ -165,7 +165,7 @@
                             style="object-fit: cover;">
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-6 wow fadeInUp" style="text-align: justify;" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">Sambutan Kepala Sekolah</h6>
                     <h1 class="mb-4"><?= $rows['judul'] ?></h1>
                     <p class="mb-4"><?= $rows['isi'] ?></p>
@@ -188,56 +188,56 @@
                 <div class="col-lg-12">
                     <div class="row text-center g-3">
                         
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">   
+                        <div class="col-lg-3 col-sm-3 wow zoomIn" data-wow-delay="0.3s">   
                             <img class="border rounded-circle p-2 mx-auto mb-3" src="img/5-prodi-aphp.jpg"
                             style="width: 150px; height: 150px;">
                             <h5 class="m-0">Agribisnis Pengolahan Hasil Pertanian</h5>
                             <p>APHP</p>
                         </div>
 
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
+                        <div class="col-lg-3 col-sm-3 wow zoomIn" data-wow-delay="0.1s">
                             <img class="border rounded-circle p-2 mx-auto mb-3" src="img/4-prodi-agri.jpg"
                             style="width: 150px; height: 150px;">
                             <h5 class="m-0">Agribisnis Tanaman Pangan & Holtikultura</h5>
                             <p>ATPH</p>
                         </div>
 
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">
+                        <div class="col-lg-3 col-sm-3 wow zoomIn" data-wow-delay="0.5s">
                             <img class="border rounded-circle p-2 mx-auto mb-3" src="img/3-prodi-atp.jpg"
                             style="width: 150px; height: 150px;">
                             <h5 class="m-0">Agribisnis Tanaman Perkebunan</h5>
                             <p>ATP</p>
                         </div>
 
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.5s">   
+                        <div class="col-lg-3 col-sm-3 wow zoomIn" data-wow-delay="0.5s">   
                             <img class="border rounded-circle p-2 mx-auto mb-3" src="img/6-prodi-atu.jpg"
                             style="width: 150px; height: 150px;">
                             <h5 class="m-0">Agribisnis Ternak Unggas</h5>
                             <p>ATU</p>
                         </div>
 
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
+                        <div class="col-lg-3 col-sm-3 wow zoomIn" data-wow-delay="0.3s">
                             <img class="border rounded-circle p-2 mx-auto mb-3" src="img/8-prodi-dipb.jpg"
                             style="width: 150px; height: 150px;">
                             <h5 class="m-0">Desain Permodelan dan Informasi Bangunan</h5>
                             <p>DIPB</p>
                         </div>
 
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.3s">
+                        <div class="col-lg-3 col-sm-3 wow zoomIn" data-wow-delay="0.3s">
                             <img class="border rounded-circle p-2 mx-auto mb-3" src="img/2-prodi-tekbis.jpg" 
                             style="width: 150px; height: 150px;">
                             <h5 class="m-0">Teknis Bisnis Sepeda Motor</h5>
                             <p>TBSM</p>
                         </div>
 
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
+                        <div class="col-lg-3 col-sm-3 wow zoomIn" data-wow-delay="0.1s">
                             <img class="border rounded-circle p-2 mx-auto mb-3" src="img/1-prodi-tkro.jpg"
                             style="width: 150px; height: 150px;">
                             <h5 class="mb-0">Teknik Kendaraan Ringan</h5>
                             <p>TKR/Otomotif</p>
                         </div>
                         
-                        <div class="col-lg-3 col-sm-6 wow zoomIn" data-wow-delay="0.1s">    
+                        <div class="col-lg-3 col-sm-3 wow zoomIn" data-wow-delay="0.1s">    
                             <img class="border rounded-circle p-2 mx-auto mb-3" src="img/7-prodi-kom.jpg"
                             style="width: 150px; height: 150px;">
                             <h5 class="m-0">Teknik Komputer & Jaringan</h5>
@@ -261,22 +261,26 @@
                 <h1 class="mb-5">Berita Terbaru</h1>
             </div>
             <div class="row g-4 justify-content-center">
-                <?php while($row = mysqli_fetch_assoc($berita)) : ?>
+                <?php while($row = mysqli_fetch_assoc($berita)) : 
+                    $date = $row['tanggal'];
+                    $datetime = DateTime::createFromFormat('Y-m-d', $date);
+                    ?>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="">   
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user text-primary me-2"></i>Admin Sekolah</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-clock text-primary me-2"></i><?= $row['tanggal'] ?></small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user text-primary me-2"></i>By Admin Sekolah</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-clock text-primary me-2"></i>
+                            <?= $datetime->format('d-m-Y') ?>
+                        </small>
                             
                         </div>
                         <div class="text-center p-4 pb-0">
                             <h5 class="mb-4"><?= $row['judul'] ?></h5>
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px;">Selengkapnya</a>
-                        </div>
-                        <br>               
+                            <a href="berita_detail.php?id=<?= $row['id'] ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end mb-2" style="border-radius: 30px;">Selengkapnya</a>
+                        </div>               
                     </div>
                 </div>
                 <?php endwhile; ?>
@@ -295,7 +299,7 @@
             </div>
 
             <div class="row g-4 justify-content-md-center">
-            <div class="col-lg-8 wow zoomIn" data-wow-delay="0.2s">
+            <div class="col-lg-8 col-md-8 wow zoomIn" data-wow-delay="0.2s">
             <div class="owl-carousel testimonial-carousel position-relative">
                 <?php while($row = mysqli_fetch_assoc($query)) : ?>
                 <div class="testimonial-item text-center">

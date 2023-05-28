@@ -73,18 +73,17 @@
     
 
     <!-- Jurusan Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s"">
+    <div class="container-xxl py-4 wow fadeInUp" data-wow-delay="0.1s"">
         <div class="container">
-            <div class="row justify-content-md-center">
+            <div class="row justify-content-md-center" style="text-align: justify;">
                 <div class="col-lg-12" style="display: flex; flex-direction: column;">
                 <?php while($row = mysqli_fetch_assoc($query)) : ?>
-                    <h3>
+                    <h3 class="mb-1">
                         <?= $row['nama_jurusan'] ?>
                     </h3>
-                    <p>
+                    <p class="mb-2">
                         <?= $row['isi'] ?>
                     </p>
-                    <br>
                     <?php endwhile; ?>
                 </div>
             </div>

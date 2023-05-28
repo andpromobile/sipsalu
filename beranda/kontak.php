@@ -69,7 +69,7 @@
     
 
     <!-- Contact Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-4">
         <div class="container">
             <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Kontak Kami</h6>
@@ -114,7 +114,7 @@
                     </iframe>
                 </div>
 
-                <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-12 wow fadeInUp" style="text-align: justify;" data-wow-delay="0.5s">
                     <p class="mb-4">Anda memiliki kesan dan pesan mengenai SMK Negeri 1 Luwu Utara ? Silahkan mengisi form dibawah ini.</p>
                     <form method="POST" action="kontak_proses.php">
                         <div class="row g-3">
