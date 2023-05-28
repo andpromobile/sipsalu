@@ -2,21 +2,9 @@
 
     require_once ('../koneksi.php');
 
-    
-    // $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1");
+    $alumni = mysqli_query($koneksi, "SELECT * FROM tbl_alumni");
 
-    $active = 'beranda';
-
-    $halaman = 2; //batasan halaman
-    $page = isset($_GET['halaman'])? (int)$_GET["halaman"]:1;
-    $mulai = ($page>1) ? ($page * $halaman) - $halaman : 0;
-    $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1 order by id desc LIMIT $mulai, $halaman");
-    $berita_row = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1");
-    $total = mysqli_num_rows($berita_row);
-    $pages = ceil($total/$halaman);
-
-    $prev = $page-1;
-    $next = $page+1;
+    $active = 'alumni';
 
     ?>
 
@@ -74,8 +62,8 @@
                 <div class="container">
                     <div class="row justify-content-center text-center">
                         <div class="col-sm-10 col-lg-8">
-                        <h1 class="text-white animated slideInDown">BERITA TERBARU</h1>
-                            <p class="fs-5 text-white mb-4 pb-2 animated slideInDown">Kumpulan Berita Terbaru SMK Negeri 1 Luwu Utara</p>
+                        <h1 class="text-white animated slideInDown">TESTIMONI ALUMNI</h1>
+                            <!-- <p class="fs-5 text-white mb-4 pb-2 animated slideInDown">Kumpulan Kegiatan SMK Negeri 1 Luwu Utara</p> -->
                         </div>
                     </div>
                 </div>
@@ -83,54 +71,30 @@
         </div>
     </div>
 
-
-    <!-- Berita Start -->
-    <div class="container-xxl py-5">
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
-            <?php while($row = mysqli_fetch_assoc($berita)) : ?>
-            <div class="row justify-content-md-center">
-                <div class="col-lg-2 wow fadeInUp" data-wow-delay="0.1s" style="display: flex; flex-direction: column;">
-                    <span>
-                        <i class="fa fa-user text-primary mb-4"></i> &nbsp; Admin Sekolah
-                    </span>
-                    <span>
-                        <i class="fa fa-clock text-primary mb-4"></i> &nbsp; <?= $row['tanggal'] ?>
-                    </span>
-                </div>
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h3><?= $row['judul'] ?></h3>
-                    <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="">
-                    <p>
-                        <?= $row['isi'] ?>
-                    </p>                   
-                </div>
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Testimoni</h6>
+                <h1 class="mb-5">Kata Alumni Kami!</h1>
             </div>
-            <br>
-            <?php endwhile; ?> 
             
-            <div class="row justify-content-md-center">
-                <div class="col-lg-2 wow fadeInUp" data-wow-delay="0.1s">
-                    <nav>
-                        <ul class="pagination">
-                            <li class="page-item <?php echo ($page-1 == 0)? 'disabled':''; ?>">
-                                <a <?php echo ($page-1 > 0)? "href='?halaman=$prev'":""; ?> class="page-link">Previous</a>
-                            </li>
-                            <?php for ($i=1; $i<=$pages ; $i++){ ?>
-                                <li class="page-item <?php echo $page == $i? 'active':''; ?>">
-                                    <a class="page-link" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
-                                </li>
-                            <?php } ?>
-                            <li class="page-item <?php echo ($page == $pages)? 'disabled':''; ?>">
-                                <a <?php echo ($page != $pages)? "href='?halaman=$next'":""; ?> class="page-link">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>               
-            </div>        
+            <div class="owl-carousel testimonial-carousel position-relative">
+            <?php while($row = mysqli_fetch_assoc($alumni)) : ?>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="../images/alumni/<?= $row['foto'] ?>" style="width: 200px; height: 200px;">
+                    <h5 class="mb-0"><?= $row['nama_alumni'] ?></h5>
+                    <p><?= $row['angkatan'] ?> || <?= $row['pekerjaan'] ?></p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0 text-justify"><?= $row['isi'] ?></p>
+                    </div>
+                </div>
+                <?php endwhile; ?>
+            </div>
+            
         </div>
     </div>
-    <!-- Berita End -->
+    <!-- Testimonial End -->
 
 
 

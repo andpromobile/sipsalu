@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2023 at 06:34 PM
+-- Generation Time: May 28, 2023 at 01:05 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -147,7 +147,8 @@ INSERT INTO `tbl_galeri` (`id`, `judul`, `isi`, `tanggal`, `foto`, `id_kategori`
 (1, 'ANBK', '', '2022-08-30', '20230514-anbk.jpg', 2),
 (2, 'Pelatihan Sumpah Pemuda', '', '2022-10-27', '20230514-pelatihan-sumpah-pemuda.jpg', 2),
 (3, 'Etgen17', '', '2023-03-23', '20230525-etgen17.jpg', 2),
-(4, 'Graduation', '', '2023-05-07', '20230514-graduation.jpg', 2);
+(4, 'Graduation', '', '2023-05-07', '20230514-graduation.jpg', 2),
+(5, 'Fun Football', '', '2023-05-26', '20230526-fun-football.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -213,11 +214,8 @@ CREATE TABLE `tbl_pengguna` (
 --
 
 INSERT INTO `tbl_pengguna` (`id`, `nama`, `username`, `password`, `level`) VALUES
-(4, 'arfan bandi', 'aa', '$2y$10$LWtHAdbjsMDC99rAcNaSrOAXmuGcWZzTcu9ZEHGecE9Ts9kKkv2ua', 1),
-(5, 'Alief', 'alief123', '$2y$10$6cxsBWXR2FgxwwYlZ.8b9erOZGF0PF3/VoUsTaqf3aJc0po7F/7fe', 2),
-(8, 'admin', 'admin', '$2y$10$/49tQ9GJS.dlVqp/qYq81eofWfB.MU2rWQLaWv0BufM.EUB8jrzXG', 1),
-(14, 'admin', 'admin4', '$2y$10$XfmpkvsWX90IK/nxh29IO.GrD1Z72dGRQOi3B5SbQl0vNFM8Dx.xG', 1),
-(18, 'dilah', 'dilah', '$2y$10$RF94F8ZOgBXZQM8HLOdg6Odx1QoS5eDlkjmClWRXa.dH4AMOXl6se', 2);
+(19, 'Operato Sekolah', 'dilah', '$2y$10$i3eyZ2ftTlKit7l1/POvF.R0A1/J60MZwIZIIABZq3Mw.h0CNPCKO', 2),
+(20, 'Admin', 'admin', '$2y$10$ydwN7M5Y8omdg/FFXSi.6.D7lu/.qnpsB5jxwqMExCLHgcYCuY/dm', 1);
 
 -- --------------------------------------------------------
 
@@ -256,6 +254,27 @@ CREATE TABLE `tbl_prestasi` (
   `nama_prestasi` varchar(100) DEFAULT NULL,
   `foto` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_sambutan`
+--
+
+CREATE TABLE `tbl_sambutan` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `judul` varchar(255) DEFAULT NULL,
+  `isi` text,
+  `foto` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_sambutan`
+--
+
+INSERT INTO `tbl_sambutan` (`id`, `nama`, `judul`, `isi`, `foto`) VALUES
+(1, 'Muhammad Syahid Pebriadi, S.Kom., M.Kom.', 'Assalamualaikum Wr. Wb.', '<p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p><p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>', '20230528-assalamualaikum-wr.-wb..png');
 
 -- --------------------------------------------------------
 
@@ -382,6 +401,12 @@ ALTER TABLE `tbl_pesan`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_sambutan`
+--
+ALTER TABLE `tbl_sambutan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_sejarah_singkat`
 --
 ALTER TABLE `tbl_sejarah_singkat`
@@ -413,13 +438,13 @@ ALTER TABLE `tbl_akreditasi`
 -- AUTO_INCREMENT for table `tbl_alumni`
 --
 ALTER TABLE `tbl_alumni`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_artikel`
 --
 ALTER TABLE `tbl_artikel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_bukutamu`
@@ -437,7 +462,7 @@ ALTER TABLE `tbl_fasilitas`
 -- AUTO_INCREMENT for table `tbl_galeri`
 --
 ALTER TABLE `tbl_galeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_jurusan`
@@ -455,13 +480,19 @@ ALTER TABLE `tbl_kategori_artikel`
 -- AUTO_INCREMENT for table `tbl_pengguna`
 --
 ALTER TABLE `tbl_pengguna`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `tbl_pesan`
 --
 ALTER TABLE `tbl_pesan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tbl_sambutan`
+--
+ALTER TABLE `tbl_sambutan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_sejarah_singkat`

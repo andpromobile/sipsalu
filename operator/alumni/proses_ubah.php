@@ -6,6 +6,7 @@ if(!isset($_POST['ubah'])) header('Location: ubah.php');
 require_once '../../koneksi.php';
 $nama_alumni = mysqli_real_escape_string($koneksi, isset($_POST['nama_alumni']) ? $_POST['nama_alumni'] : '');
 $angkatan = mysqli_real_escape_string($koneksi, isset($_POST['angkatan']) ? $_POST['angkatan'] : '');
+$pekerjaan = mysqli_real_escape_string($koneksi, isset($_POST['angkatan']) ? $_POST['pekerjaan'] : '');
 $id_jurusan = mysqli_real_escape_string($koneksi, isset($_POST['id_jurusan']) ? $_POST['id_jurusan'] : '');
 $isi = mysqli_real_escape_string($koneksi, isset($_POST['isi']) ? $_POST['isi'] : '');
 $id = $_GET['id'];
@@ -37,7 +38,7 @@ if($_FILES['foto']['error'] == 0){
 		move_uploaded_file($asal, $tujuan . $nama_foto) or die('gagal upload foto');
 
 		// ubah data
-		$query = mysqli_query($koneksi, "UPDATE tbl_alumni SET nama_alumni = '$nama_alumni', angkatan = $angkatan, isi = '$isi', foto = '$nama_foto', id_jurusan = $id_jurusan WHERE id = $id") or die(mysqli_error($koneksi));
+		$query = mysqli_query($koneksi, "UPDATE tbl_alumni SET nama_alumni = '$nama_alumni', angkatan = '$angkatan', pekerjaan = '$pekerjaan', isi = '$isi', foto = '$nama_foto', id_jurusan = $id_jurusan WHERE id = $id") or die(mysqli_error($koneksi));
 		if($query){
 			$_SESSION['sukses'] = 'Data Berhasil Diubah!';
 			header('Location: index.php');
@@ -50,7 +51,7 @@ if($_FILES['foto']['error'] == 0){
 		header('Location: index.php');
 	}
 } else {
-	$query = mysqli_query($koneksi, "UPDATE tbl_alumni SET nama_alumni = '$nama_alumni', angkatan = $angkatan, isi = '$isi', foto = '$nama_foto', id_jurusan = $id_jurusan WHERE id = $id") or die(mysqli_error($koneksi));
+	$query = mysqli_query($koneksi, "UPDATE tbl_alumni SET nama_alumni = '$nama_alumni', angkatan = '$angkatan', pekerjaan = '$pekerjaan', isi = '$isi', foto = '$nama_foto', id_jurusan = $id_jurusan WHERE id = $id") or die(mysqli_error($koneksi));
 
 	if($query){
 			$_SESSION['sukses'] = 'Data Berhasil Diubah!';

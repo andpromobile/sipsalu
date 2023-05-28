@@ -10,7 +10,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM tbl_pengguna WHERE username = '$u
 if($query->num_rows > 0){
 	$row = mysqli_fetch_assoc($query);
 	if(password_verify($password, $row['password']) and $row['level']==1){
-		$_SESSION['auth_admin'] = true;
+		$_SESSION['auth_admin1'] = true;
 		$_SESSION['id'] = $row['id'];
 		$_SESSION['level'] = 1;
 		$_SESSION['nama'] = $row['nama'];
@@ -19,7 +19,7 @@ if($query->num_rows > 0){
 		header('Location: admin/index.php');
 
 	}else if(password_verify($password, $row['password']) and $row['level']==2){
-		$_SESSION['auth_admin'] = true;
+		$_SESSION['auth_admin2'] = true;
 		$_SESSION['id'] = $row['id'];
 		$_SESSION['level'] = 2;
 		$_SESSION['nama'] = $row['nama'];

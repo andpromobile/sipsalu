@@ -1,6 +1,6 @@
 <?php 
 
-$active = 'artikel'; 
+$active = 'galeri'; 
 require_once '../../koneksi.php';
 // $query = mysqli_query($koneksi, "SELECT * FROM tbl_kategori_artikel");
 
@@ -10,7 +10,7 @@ require_once '../../koneksi.php';
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tambah Artikel - SMKN 1 Luwu Utara</title>
+	<title>Tambah Galeri - SMKN 1 Luwu Utara</title>
 	<link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
 </head>
 <body>
@@ -22,7 +22,7 @@ require_once '../../koneksi.php';
 					<div class="card-header">
 						<div class="clearfix">
 							<div class="float-left">
-								Tambah Artikel
+								Tambah Galeri
 							</div>
 							<div class="float-right">
 								<a href="index.php">Kembali</a>
@@ -33,7 +33,7 @@ require_once '../../koneksi.php';
 						<form method="POST" action="proses_tambah.php" enctype="multipart/form-data">
 							<div class="form-group">
 								<label for="judul">Judul</label>
-								<input type="text" class="form-control" id="judul" placeholder="Judul Artikel" autocomplete="off" required="required" name="judul">
+								<input type="text" class="form-control" id="judul" placeholder="Judul Galeri" autocomplete="off" required="required" name="judul">
 							</div>
 							<!-- <div class="form-group">
 								<label for="id_kategori">Kategori Artikel</label>
@@ -45,7 +45,7 @@ require_once '../../koneksi.php';
 							</div> -->
 							<div class="form-group">
 								<label for="foto">Foto</label>
-								<input type="file" class="form-control-file" id="foto" placeholder="foto artikel" autocomplete="off" required="required" name="foto">
+								<input type="file" class="form-control-file" id="foto" placeholder="foto galeri" autocomplete="off" required="required" name="foto">
 							</div>
 							<div class="form-group">
 								<label for="isi">Keterangan</label>
@@ -53,7 +53,7 @@ require_once '../../koneksi.php';
 							</div>
 							<div class="form-group">
 								<button type="submit" class="btn btn-sm btn-primary" name="tambah">Tambah</button>
-								<button type="reset" class="btn btn-sm btn-danger" onclick="return confirm('apakah anda yakin?')">Batal</button>
+								<button type="reset" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin?')">Batal</button>
 								<a href="index.php" class="btn btn-sm btn-secondary">Kembali</a>
 							</div>
 						</form>

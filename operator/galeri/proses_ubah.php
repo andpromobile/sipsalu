@@ -23,23 +23,23 @@ if($_FILES['foto']['error'] == 0){
 	$asal = $_FILES['foto']['tmp_name'];
 } else {
 	// hapus foto sebelumnya
-	$query_artikel = mysqli_query($koneksi, "SELECT foto FROM tbl_artikel WHERE id = $id");
-	$row = mysqli_fetch_assoc($query_artikel);
+	$query_galeri = mysqli_query($koneksi, "SELECT foto FROM tbl_galeri WHERE id = $id");
+	$row = mysqli_fetch_assoc($query_galeri);
 	
 
 	$nama_foto = $row['foto'];
 }
 
-$tujuan = '../../images/artikel/';
+$tujuan = '../../images/galeri/';
 		
 if($_FILES['foto']['error'] == 0){
 	if($_FILES['foto']['size'] < 5000000){
-		if (file_exists('../../images/artikel/' . $nama_foto)) unlink('../../images/artikel/' . $nama_foto . '.' . $ekstensi);
-		if(file_exists('../../images/artikel/' . $row['foto'])) unlink('../../images/artikel/' . $row['foto']);
+		if (file_exists('../../images/galeri/' . $nama_foto)) unlink('../../images/galeri/' . $nama_foto . '.' . $ekstensi);
+		if(file_exists('../../images/galeri/' . $row['foto'])) unlink('../../images/galeri/' . $row['foto']);
 		move_uploaded_file($asal, $tujuan . $nama_foto) or die('gagal upload foto');
 
 		// ubah data
-		$query = mysqli_query($koneksi, "UPDATE tbl_artikel SET judul = '$judul', isi = '$isi', foto = '$nama_foto' WHERE id = $id") or die(mysqli_error($koneksi));
+		$query = mysqli_query($koneksi, "UPDATE tbl_galeri SET judul = '$judul', isi = '$isi', foto = '$nama_foto' WHERE id = $id") or die(mysqli_error($koneksi));
 		if($query){
 			$_SESSION['sukses'] = 'Data Berhasil Diubah!';
 			header('Location: index.php');
@@ -52,7 +52,7 @@ if($_FILES['foto']['error'] == 0){
 		header('Location: index.php');
 	}
 } else {
-	$query = mysqli_query($koneksi, "UPDATE tbl_artikel SET judul = '$judul', isi = '$isi', foto = '$nama_foto' WHERE id = $id") or die(mysqli_error($koneksi));
+	$query = mysqli_query($koneksi, "UPDATE tbl_galeri SET judul = '$judul', isi = '$isi', foto = '$nama_foto' WHERE id = $id") or die(mysqli_error($koneksi));
 
 	if($query){
 			$_SESSION['sukses'] = 'Data Berhasil Diubah!';

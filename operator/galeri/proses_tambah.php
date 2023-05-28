@@ -19,13 +19,13 @@ $nama_foto = str_replace(' ', '-', $nama_foto) . '.' . $ekstensi;
 
 
 $asal = $_FILES['foto']['tmp_name'];
-$tujuan = '../../images/artikel/';
+$tujuan = '../../images/galeri/';
 
 if($_FILES['foto']['error'] == 0){
 	if($_FILES['foto']['size'] < 5000000){
-		if (file_exists('../../images/artikel/' . $nama_foto)) unlink('../../images/artikel/' . $nama_foto);
+		if (file_exists('../../images/galeri/' . $nama_foto)) unlink('../../images/galeri/' . $nama_foto);
 
-		$query = mysqli_query($koneksi, "INSERT INTO tbl_artikel (judul, isi, tanggal, foto, id_kategori) VALUES('$judul', '$isi', '$tanggal', '$nama_foto', 1)") or die(mysqli_error($koneksi));
+		$query = mysqli_query($koneksi, "INSERT INTO tbl_galeri (judul, isi, tanggal, foto, id_kategori) VALUES('$judul', '$isi', '$tanggal', '$nama_foto', 2)") or die(mysqli_error($koneksi));
 		move_uploaded_file($asal, $tujuan . $nama_foto) or die('gagal upload foto');
 		if($query){
 			$_SESSION['sukses'] = 'Data Berhasil Ditambahkan!';

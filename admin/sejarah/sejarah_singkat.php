@@ -4,7 +4,7 @@ require_once '../../koneksi.php';
 
 $query = mysqli_query($koneksi, "SELECT * FROM tbl_sejarah_singkat WHERE id = 1");
 $sejarah = mysqli_fetch_assoc($query);
-$active = 'sejarah'; 
+$active = 'tentang'; 
 
 ?>
 <!DOCTYPE html>

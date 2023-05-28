@@ -5,17 +5,17 @@ if(!isset($_GET['id']) || $_GET['id'] == '') header('Location: index.php');
 require_once '../../koneksi.php';
 $id = $_GET['id'];
 // $query_kategori = mysqli_query($koneksi, "SELECT * FROM tbl_kategori_artikel");
-$query_artikel = mysqli_query($koneksi, "SELECT * FROM tbl_artikel WHERE id = $id");
-$artikel = mysqli_fetch_assoc($query_artikel);
+$query_galeri = mysqli_query($koneksi, "SELECT * FROM tbl_galeri WHERE id = $id");
+$galeri = mysqli_fetch_assoc($query_galeri);
 
-$active = 'artikel'; 
+$active = 'galeri'; 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Ubah Artikel - SMKN 1 Luwu Utara</title>
+	<title>Ubah Galeri - SMKN 1 Luwu Utara</title>
 	<link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
 </head>
 <body>
@@ -27,7 +27,7 @@ $active = 'artikel';
 					<div class="card-header">
 						<div class="clearfix">
 							<div class="float-left">
-								Ubah Artikel
+								Ubah Galeri
 							</div>
 							<div class="float-right">
 								<a href="index.php">Kembali</a>
@@ -35,10 +35,10 @@ $active = 'artikel';
 						</div>
 					</div>
 					<div class="card-body">
-						<form method="POST" action="proses_ubah.php?id=<?= $artikel['id'] ?>" enctype="multipart/form-data">
+						<form method="POST" action="proses_ubah.php?id=<?= $galeri['id'] ?>" enctype="multipart/form-data">
 							<div class="form-group">
 								<label for="judul">Judul</label>
-								<input type="text" value="<?= $artikel['judul'] ?>" class="form-control" id="judul" placeholder="judul artikel" autocomplete="off" required="required" name="judul">
+								<input type="text" value="<?= $galeri['judul'] ?>" class="form-control" id="judul" placeholder="judul galeri" autocomplete="off" required="required" name="judul">
 							</div>
 							<!-- <div class="form-group">
 								<label for="id_kategori">Kategori Artikel</label>
@@ -50,14 +50,14 @@ $active = 'artikel';
 							</div> -->
 							<div class="form-group">
 								<label for="foto">Foto</label>
-								<input type="file" class="form-control-file mb-2" id="foto" placeholder="Foto Artikel" autocomplete="off" name="foto">
+								<input type="file" class="form-control-file mb-2" id="foto" placeholder="Foto Galeri" autocomplete="off" name="foto">
 								*gambar sebelumnya <br>
-								<img src="../../images/artikel/<?= $artikel['foto'] ?>" alt="<?= $row['judul'] ?>" width="500px" class="mt-2">
+								<img src="../../images/galeri/<?= $galeri['foto'] ?>" alt="<?= $row['judul'] ?>" width="500px" class="mt-2">
 							</div>
 							<div class="form-group">
 								<label for="isi">Keterangan</label>
 								<textarea name="isi" id="ckeditor" class="ckeditor form-control">
-									<?= $artikel['isi'] ?>
+									<?= $galeri['isi'] ?>
 								</textarea>
 							</div>
 							<div class="form-group">

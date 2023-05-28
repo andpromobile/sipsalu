@@ -52,6 +52,11 @@ $active = 'alumni';
 								<td><?= $row['angkatan'] ?></td>
 							</tr>
 							<tr>
+								<td><b>Pekerjaan</b></td>
+								<td>:</td>
+								<td><?= $row['pekerjaan'] ?></td>
+							</tr>
+							<tr>
 								<td><b>Testimoni</b></td>
 								<td>:</td>
 								<td><?= $row['isi'] ?></td>

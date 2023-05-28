@@ -3,7 +3,19 @@
     require_once ('../koneksi.php');
 
     
-    $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 2 order by id desc LIMIT 8");
+    // $berita = mysqli_query($koneksi, "SELECT * FROM tbl_galeri where id_kategori = 2 order by id desc LIMIT 8");
+
+
+    $halaman = 4; //batasan halaman
+    $page = isset($_GET['halaman'])? (int)$_GET["halaman"]:1;
+    $mulai = ($page>1) ? ($page * $halaman) - $halaman : 0;
+    $berita = mysqli_query($koneksi, "SELECT * FROM tbl_galeri where id_kategori = 2 order by id desc LIMIT $mulai, $halaman");
+    $berita_row = mysqli_query($koneksi, "SELECT * FROM tbl_galeri where id_kategori = 2");
+    $total = mysqli_num_rows($berita_row);
+    $pages = ceil($total/$halaman);
+
+    $prev = $page-1;
+    $next = $page+1;
 
     $active = 'beranda';
 
@@ -40,6 +52,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/w3.css">
 </head>
 
 <body>
@@ -71,34 +84,56 @@
             </div>
         </div>
     </div>
-
-
+    
     <!-- Galeri Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row justify-content-md-center">
+            <div class="row g-4 justify-content-md-justify">
             <?php while($row = mysqli_fetch_assoc($berita)) : ?>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="">
+                            <!-- <img class="img-fluid" src="../images/galeri/<?= $row['foto'] ?>" alt=""> -->
+                            <img class="img-fluid" src="../images/galeri/<?= $row['foto'] ?>" style="cursor:zoom-in"
+                            onclick="document.getElementById('<?= $row['id'] ?>').style.display='block'">
+                            <div id="<?= $row['id'] ?>" class="w3-modal" onclick="this.style.display='none'">
+                                <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                                <div class="w3-modal-content w3-animate-zoom">
+                                    <img src="../images/galeri/<?= $row['foto'] ?>" style="width:100%">
+                                </div>
+                            </div>
                         </div>
-                       
                         <div class="text-center p-4">
                             <h5 class="mb-0"><?= $row['judul'] ?></h5>
-                           
                         </div>
                     </div>
                 </div>
-
                 <?php endwhile; ?>
             </div>
             <br>
+            <div class="row justify-content-md-center">
+                <div class="col-lg-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item <?php echo ($page-1 == 0)? 'disabled':''; ?>">
+                                <a <?php echo ($page-1 > 0)? "href='?halaman=$prev'":""; ?> class="page-link">Previous</a>
+                            </li>
+                            <?php for ($i=1; $i<=$pages ; $i++){ ?>
+                                <li class="page-item <?php echo $page == $i? 'active':''; ?>">
+                                    <a class="page-link" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
+                                </li>
+                            <?php } ?>
+                            <li class="page-item <?php echo ($page == $pages)? 'disabled':''; ?>">
+                                <a <?php echo ($page != $pages)? "href='?halaman=$next'":""; ?> class="page-link">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>               
+            </div>
         </div>
     </div>
     <!-- Galeri End -->
-
-
+    
 
     <!-- Footer Start -->
     <?php include('footer.php'); ?>
