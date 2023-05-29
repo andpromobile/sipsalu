@@ -1,6 +1,6 @@
 <?php
 
-    require_once ('../koneksi.php');
+    require_once ('./koneksi.php');
 
     $alumni = mysqli_query($koneksi, "SELECT * FROM tbl_alumni");
 
@@ -82,7 +82,7 @@
             <div class="owl-carousel testimonial-carousel position-relative">
             <?php while($row = mysqli_fetch_assoc($alumni)) : ?>
                 <div class="testimonial-item">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="../images/alumni/<?= $row['foto'] ?>" style="width: 200px; height: 200px;">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="./images/alumni/<?= $row['foto'] ?>" style="width: 200px; height: 200px;">
                     <h5 class="mb-0 text-center"><?= $row['nama_alumni'] ?></h5>
                     <p class="mb-2 text-center"><?= $row['angkatan'] ?> || <?= $row['pekerjaan'] ?></p>
                     <div class="testimonial-text bg-light p-3" style="text-align: justify;">

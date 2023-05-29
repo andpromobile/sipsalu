@@ -1,6 +1,6 @@
 <?php
 
-    require_once ('../koneksi.php');
+    require_once ('./koneksi.php');
 
     
     // $berita = mysqli_query($koneksi, "SELECT * FROM tbl_artikel where id_kategori = 1");
@@ -104,7 +104,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h3 class="mb-2"><?= $row['judul'] ?></h3>
                     <a class="position-relative d-block overflow-hidden mb-2" href="#">
-                        <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="">
+                        <img class="img-fluid" src="./images/artikel/<?= $row['foto'] ?>" alt="">
                     </a>
                     <a href="berita_detail.php?id=<?= $row['id'] ?>" class="flex-shrink-0 btn btn-md btn-primary px-3 border-end mb-4" style="border-radius: 30px;" >Selengkapnya</a>                   
                 </div>

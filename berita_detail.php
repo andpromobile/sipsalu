@@ -1,6 +1,6 @@
 <?php
 
-    require_once ('../koneksi.php');
+    require_once ('./koneksi.php');
 
     if(!isset($_GET['id']) || $_GET['id'] == '') header('Location: berita.php');
     $id = $_GET['id'];
@@ -96,7 +96,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-8 wow zoomIn" data-wow-delay="0.1s">
                     <a class="position-relative d-block h-100 overflow-hidden" href="#">
-                        <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="" >
+                        <img class="img-fluid" src="./images/artikel/<?= $row['foto'] ?>" alt="" >
                         <div class="bg-white position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
                             <!-- <h5 class="m-0"><?= $row['tanggal'] ?></h5>
                             <small class="text-primary">Admin Sekolah</small> -->

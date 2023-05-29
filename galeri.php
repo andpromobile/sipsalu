@@ -1,6 +1,6 @@
 <?php
 
-    require_once ('../koneksi.php');
+    require_once ('./koneksi.php');
 
     
     // $berita = mysqli_query($koneksi, "SELECT * FROM tbl_galeri where id_kategori = 2 order by id desc LIMIT 8");
@@ -94,12 +94,12 @@
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <!-- <img class="img-fluid" src="../images/galeri/<?= $row['foto'] ?>" alt=""> -->
-                            <img class="img-fluid" src="../images/galeri/<?= $row['foto'] ?>" style="cursor:zoom-in"
+                            <img class="img-fluid" src="./images/galeri/<?= $row['foto'] ?>" style="cursor:zoom-in"
                             onclick="document.getElementById('<?= $row['id'] ?>').style.display='block'">
                             <div id="<?= $row['id'] ?>" class="w3-modal" onclick="this.style.display='none'">
                                 <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
                                 <div class="w3-modal-content w3-animate-zoom">
-                                    <img src="../images/galeri/<?= $row['foto'] ?>" style="width:100%">
+                                    <img src="./images/galeri/<?= $row['foto'] ?>" style="width:100%">
                                 </div>
                             </div>
                         </div>

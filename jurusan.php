@@ -1,6 +1,6 @@
 <?php
 
-    require_once ('../koneksi.php');
+    require_once ('./koneksi.php');
 
     $query = mysqli_query($koneksi, "SELECT * FROM tbl_jurusan order by nama_jurusan");
 
