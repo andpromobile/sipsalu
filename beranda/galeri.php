@@ -86,7 +86,7 @@
     </div>
     
     <!-- Galeri Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-2">
         <div class="container">
             <div class="row g-4 justify-content-md-justify">
             <?php while($row = mysqli_fetch_assoc($berita)) : ?>

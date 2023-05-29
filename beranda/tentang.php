@@ -77,24 +77,21 @@
     
 
     <!-- Visi Misi Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="visi_misi">
+    <div class="container-xxl py-4 wow fadeInUp" data-wow-delay="0.1s" id="visi_misi">
         <div class="container">
             <div class="text-center">
                 <h6 class="section-title bg-white text-center text-primary px-3">Tentang Kami</h6>
-                <h1 class="mb-5">Visi dan Misi</h1>
+                <h1 class="mb-2">Visi dan Misi</h1>
             </div>
-            <div class="row justify-content-md-center">
+            <div class="row justify-content-md-center" style="text-align: justify;">
                 <div class="col-lg-12" style="display: flex; flex-direction: column;">
                 <?php $row = mysqli_fetch_assoc($query); ?>
-                <h3>Visi</h3>
-                <p>
+                <h3 class="mb-1">Visi</h3>
+                <p class="mb-2">
                     <?= $row['visi'] ?>
                 </p>
-        
-                <br>
-        
-                <h3>Misi</h3>
-                <p>
+                <h3 class="mb-1">Misi</h3>
+                <p class="mb-2">
                     <?= $row['misi'] ?>
                 </p>
             </div>
@@ -109,12 +106,12 @@
         <div class="container">
             <div class="text-center">
                 <h6 class="section-title bg-white text-center text-primary px-3">Tentang Kami</h6>
-                <h1 class="mb-5">Sejarah Sekolah</h1>
+                <h1 class="mb-2">Sejarah Sekolah</h1>
             </div>
-            <div class="row justify-content-md-center">
+            <div class="row justify-content-md-center" style="text-align: justify;">
                 <div class="col-lg-12" style="display: flex; flex-direction: column;">
                 <?php $row = mysqli_fetch_assoc($sekolah); ?>
-                <p>
+                <p class="mb-2">
                     <?= $row['sejarah_singkat'] ?>
                 </p>
             </div>
@@ -129,10 +126,10 @@
         <div class="container">
             <div class="text-center">
                 <h6 class="section-title bg-white text-center text-primary px-3">Tentang Kami</h6>
-                <h1 class="mb-5"><?= $row['judul'] ?></h1>
+                <h1 class="mb-2"><?= $row['judul'] ?></h1>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-7 col-md-7">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-8">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="../images/struktur/<?= $row['foto'] ?>" alt="">

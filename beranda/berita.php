@@ -85,28 +85,31 @@
 
 
     <!-- Berita Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-2 category">
         <div class="container">
-            <?php while($row = mysqli_fetch_assoc($berita)) : ?>
+            <?php while($row = mysqli_fetch_assoc($berita)) :
+                $date = $row['tanggal'];
+                $datetime = DateTime::createFromFormat('Y-m-d', $date);
+                ?>
             <div class="row justify-content-md-center">
                 <div class="col-lg-2 wow fadeInUp" data-wow-delay="0.1s" style="display: flex; flex-direction: column;">
                     <span>
-                        <i class="fa fa-user text-primary mb-4"></i> &nbsp; Admin Sekolah
+                        <i class="fa fa-user text-primary mb-4"></i> &nbsp; By Admin Sekolah
                     </span>
                     <span>
-                        <i class="fa fa-clock text-primary mb-4"></i> &nbsp; <?= $row['tanggal'] ?>
+                        <i class="fa fa-clock text-primary mb-4"></i> &nbsp; <?= $datetime->format('d-m-Y') ?>
                     </span>
                 </div>
 
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h3><?= $row['judul'] ?></h3>
-                    <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="">
-                    <p>
-                        <?= $row['isi'] ?>
-                    </p>                   
+                    <h3 class="mb-2"><?= $row['judul'] ?></h3>
+                    <a class="position-relative d-block overflow-hidden mb-2" href="#">
+                        <img class="img-fluid" src="../images/artikel/<?= $row['foto'] ?>" alt="">
+                    </a>
+                    <a href="berita_detail.php?id=<?= $row['id'] ?>" class="flex-shrink-0 btn btn-md btn-primary px-3 border-end mb-4" style="border-radius: 30px;" >Selengkapnya</a>                   
                 </div>
             </div>
-            <br>
+            
             <?php endwhile; ?> 
             
             <div class="row justify-content-md-center">
