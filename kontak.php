@@ -176,8 +176,8 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <script src="../resources/js/jquery.js"></script>
-	<script src="../resources/js/bootstrap.min.js"></script>
+    <script src="./resources/js/jquery.js"></script>
+	<script src="./resources/js/bootstrap.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

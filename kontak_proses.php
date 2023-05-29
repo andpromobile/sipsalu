@@ -1,6 +1,6 @@
 <?php 
 
-require_once ('../koneksi.php');
+require_once ('./koneksi.php');
 
 if(!isset($_POST['kirim'])) header('Location: bukutamu.php');
 
